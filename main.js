@@ -36,19 +36,19 @@
 
 // str = [[[a, a], a], a, a, [a, a, [a, a, a]], a]
 function generateList(arr) {
-    console.log(arr.length)
+    // console.log(arr.length)
     const lst = document.getElementById(ident);
     // console.log(lst, typeof(ident));
     for (let i = 0; i < arr.length; i++) {
         // console.log('arr[i]', arr[i]);
         if (!Array.isArray(arr[i])) {
-            console.log(arr[i], 'is NOT array');
+            // console.log(arr[i], 'is NOT array');
             const li = document.createElement('li');
             li.textContent = 'This is added element ' + arr[i];
             console.log(lst, li);
             lst.append(li);
         } else {
-            console.log(arr[i], 'is array');
+            // console.log(arr[i], 'is array');
             const li = document.createElement('li');
             lst.append(li);
             const ul = document.createElement('ul');
@@ -67,11 +67,11 @@ const arr = null;
 let ident = 0
 while (arr === null) {
     let str = prompt('Please insert array to create the list structure', 'array like [x1, x2, [x3.1, [x3.2.1]], ...]')
-    console.log(str);
+    // console.log(str);
     let arr = JSON.parse(str.replace(/'/g,"\"").replace(/a/g,"\"$&\""));
-    console.log(Array.isArray(arr));
+    // console.log(Array.isArray(arr));
     // arr = arr[0];
-    console.log(arr);
+    // console.log(arr);
     if (Array.isArray(arr)) {
         generateList(arr)
         break
@@ -81,19 +81,3 @@ while (arr === null) {
         arr = null;
     }
 }
-
-
-// str = [[[a, a], a], a, a, [a, a, [a, a, a]], a]
-// string_to_array(str) 
-
-// function string_to_array (str) {
-//     let count = (str.match(/\[/g) || []).length;
-//     if (count > 1) {
-//         for (let i = 0; i < count; i++) {
-
-//         }
-//     }
-//     return count
-// }
-
-
