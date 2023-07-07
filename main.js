@@ -45,7 +45,7 @@ function generateList(arr) {
             // console.log(arr[i], 'is NOT array');
             const li = document.createElement('li');
             li.textContent = 'This is added element ' + arr[i];
-            console.log(lst, li);
+            // console.log(lst, li);
             lst.append(li);
         } else {
             // console.log(arr[i], 'is array');
